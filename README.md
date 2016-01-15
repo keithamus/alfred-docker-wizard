@@ -1,4 +1,7 @@
 # Control Docker machines & containers with Alfred
+
+[Download Workflow](https://github.com/keithamus/alfred-docker-wizard/releases/download/1.0.0/Docker.Wizard.alfredworkflow)
+
 <p align="center"><img src="./icon.png" width="150"/></p>
 
 This workflow will list your Docker machines. Hitting enter on them will then
