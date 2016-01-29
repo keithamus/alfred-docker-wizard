@@ -1,6 +1,6 @@
 # Control Docker machines & containers with Alfred
 
-[Download Workflow](https://github.com/keithamus/alfred-docker-wizard/releases/download/1.0.0/Docker.Wizard.alfredworkflow)
+[Download Workflow](https://github.com/keithamus/alfred-docker-wizard/releases/download/1.1.0/Docker.Wizard.alfredworkflow)
 
 <p align="center"><img src="./icon.png" width="150"/></p>
 
