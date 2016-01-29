@@ -13,6 +13,10 @@ then
     echo "  <title>Shut Down Machine $MACHINE</title>"
     echo "  <subtitle>Will shut down all containers on $MACHINE</subtitle>"
     echo "</item>"
+    echo "<item arg=\"machine ip '$MACHINE'\" uid=\"$MACHINE-ip\">"
+    echo "  <title>Copy Machine IP $MACHINE</title>"
+    echo "  <subtitle>Copy '$(docker-machine ip $MACHINE)' to clipboard</subtitle>"
+    echo "</item>"
     ENV=$(docker-machine env --shell sh "$MACHINE")
     eval "$ENV"
     CONTAINERS="$(docker ps --format "{{.Names}} ({{.Image}})|Running for: {{.RunningFor}}|{{.ID}}")"
@@ -39,10 +43,11 @@ else
   do
     MACHINE_VERSION=$(docker-machine version $MACHINE)
     MACHINE_STATUS=$(docker-machine status $MACHINE)
+    MACHINE_IP=$(docker-machine ip $MACHINE)
     MACHINE_DRIVER=$(docker-machine inspect $MACHINE | sed -n 's/.*"DriverName": "\(.*\)",/\1/p')
     echo "<item arg=\"$MACHINE\" uid=\"$MACHINE\" valid=\"no\" autocomplete=\"$MACHINE\">"
     echo "  <title>$MACHINE</title>"
-    echo "  <subtitle>$MACHINE_STATUS (Docker $MACHINE_VERSION on $MACHINE_DRIVER)</subtitle>"
+    echo "  <subtitle>$MACHINE_STATUS (Docker $MACHINE_VERSION on $MACHINE_DRIVER), $MACHINE_IP</subtitle>"
     echo "</item>"
   done <<< "$MACHINES"
 fi

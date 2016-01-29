@@ -11,6 +11,12 @@ echo "Command: $COMMAND"
 echo "Machine: $MACHINE"
 echo "ID: $ID"
 
+if [ "$TYPE" = "machine" -a "$COMMAND" = "ip" ];
+then
+  docker-machine ip "$MACHINE" | pbcopy
+  exit $?
+fi
+
 if [ "$TYPE" = "machine" ]
 then
   docker-machine "$COMMAND" "$MACHINE"
