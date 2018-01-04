@@ -1,6 +1,6 @@
 # Control Docker machines & containers with Alfred
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/ygkcNhfZ9nTDeVM6P8LSGn1C/keithamus/alfred-docker-wizard'>  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/ygkcNhfZ9nTDeVM6P8LSGn1C/keithamus/alfred-docker-wizard.svg' /></a>
+
 
 [Download Workflow](https://github.com/keithamus/alfred-docker-wizard/releases/download/1.1.0/Docker.Wizard.alfredworkflow)
 
